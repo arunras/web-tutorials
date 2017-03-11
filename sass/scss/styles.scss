@@ -12,6 +12,9 @@
     li{
         float: left;
         width: 14%;
+        @include mQ(600px){
+            width: 100%;
+        }
     }
     a{
         color: $offWhite;
@@ -20,7 +23,7 @@
         display: block;
         text-align: center;
         &:hover{
-            background:#333;
+            background: lighten($deepBlue, 6);
         }
     }
 } // end #main-nav
@@ -69,7 +72,7 @@ section h1 {
         color: $deepBlue;
         font-weight: bold;
         &:hover{
-            color: red;
+            color: complement($deepBlue);
         }
     }
     ul{
@@ -77,10 +80,12 @@ section h1 {
     }
 }
 
-
-
-
-
+#projects li{
+    @include grid(2, 8%);
+    img{
+        width: 100%;
+    }
+}
 
 
 
